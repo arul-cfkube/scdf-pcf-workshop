@@ -31,10 +31,19 @@ dataflow:>stream create --name words --definition "http | splitter --expression=
 Created new stream 'words'
 ---------------------------------------------------------------------
 
-. Next, deploy the stream, using the stream deploy command:
+. Deploy the stream, using the stream deploy command:
 +
 [source, bash]
 ---------------------------------------------------------------------
 dataflow:>stream deploy words
 Deployment request has been sent for stream 'words'
 ---------------------------------------------------------------------
+
+. Go to Apps manager and SCDF dashboard and check out the pipeline
+
+. Login to cf cli and check the deployed apps.
+
+
+== Creating a Data Pipeline Using the Dashboard
+
+. https://docs.pivotal.io/scdf/1-6/getting-started.html#creating-a-data-pipeline-using-the-dashboard
