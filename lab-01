@@ -2,7 +2,7 @@
 # Requirements for lab-01
  * SCDF tile installed on TAS
 
- ```
+ ```bash
  $ cf create-service p-dataflow standard scdf-service
 
  $ cf service scdf-service
@@ -24,10 +24,10 @@
  started:   2020-05-16T21:13:32Z
  updated:   2020-05-16T21:32:19Z
 
- ```
+ ```bash
  * Install cf cli plugin for SCDF
 
- ```
+ ```bash
  $ cf install-plugin -r CF-Community "spring-cloud-dataflow-for-pcf"
  ```
 
