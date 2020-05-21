@@ -39,10 +39,44 @@ dataflow:>stream deploy words
 Deployment request has been sent for stream 'words'
 ---------------------------------------------------------------------
 
-. Go to Apps manager and SCDF dashboard and check out the pipeline
 
 . Login to cf cli and check the deployed apps.
++
+[source, bash]
+---------------------------------------------------------------------
+$ cf apps
+Getting apps in org myorg / space dev as user...
+OK
 
+name                        requested state   instances   memory   disk   urls
+RWSDZgk-words-http-v1       started           1/1         1G       1G     RWSDZgk-words-http-v1.apps.example.com
+RWSDZgk-words-log-v1        started           1/1         1G       1G     RWSDZgk-words-log-v1.apps.example.com
+RWSDZgk-words-splitter-v1   started           1/1         1G       1G     RWSDZgk-words-splitter-v1.apps.example.com
+
+---------------------------------------------------------------------
+
+. Do a post form scdf shell
++
+[source, bash]
+---------------------------------------------------------------------
+
+$ cf dataflow-shell dataflow
+...
+Welcome to the Spring Cloud Data Flow shell. For assistance hit TAB or type "help".
+dataflow:>http post --target https://RWSDZgk-words-http-v1.apps.example.com --data "This is a test"
+> POST (text/plain) https://RWSDZgk-words-http-v1.apps.example.com This is a test
+> 202 ACCEPTED
+---------------------------------------------------------------------
+
+. Watch for the processed data in the RWSDZgk-words-log-v1 application’s logs:
++
+[source, bash]
+---------------------------------------------------------------------
+2020-05-20T16:47:08.80-0500 [APP/PROC/WEB/0] OUT 2020-05-20 21:47:08.808  INFO 16 --- [plitter.words-1] RWSDZgk-words-log-v1                     : This
+2020-05-20T16:47:08.81-0500 [APP/PROC/WEB/0] OUT 2020-05-20 21:47:08.810  INFO 16 --- [plitter.words-1] RWSDZgk-words-log-v1                     : is
+2020-05-20T16:47:08.82-0500 [APP/PROC/WEB/0] OUT 2020-05-20 21:47:08.820  INFO 16 --- [plitter.words-1] RWSDZgk-words-log-v1                     : a
+2020-05-20T16:47:08.82-0500 [APP/PROC/WEB/0] OUT 2020-05-20 21:47:08.822  INFO 16 --- [plitter.words-1] RWSDZgk-words-log-v1                     : test
+----------------------------------------------------------------------
 
 == Creating a Data Pipeline Using the Dashboard
 
