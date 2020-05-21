@@ -1,5 +1,9 @@
 = Lab-01
 
+== Creating a Data Pipeline Using the Dashboard
+
+. https://docs.pivotal.io/scdf/1-6/getting-started.html#creating-a-data-pipeline-using-the-dashboard
+
 ==  Running an data pipeline from SCDF shell
 
 . Access SCDF Shell
@@ -77,7 +81,3 @@ dataflow:>http post --target https://RWSDZgk-words-http-v1.apps.example.com --da
 2018-06-07T16:47:08.82-0500 [APP/PROC/WEB/0] OUT 2018-06-07 21:47:08.820  INFO 16 --- [plitter.words-1] RWSDZgk-words-log-v1                     : a
 2018-06-07T16:47:08.82-0500 [APP/PROC/WEB/0] OUT 2018-06-07 21:47:08.822  INFO 16 --- [plitter.words-1] RWSDZgk-words-log-v1                     : test
 ---------------------------------------------------------------------
-
-== Creating a Data Pipeline Using the Dashboard
-
-. https://docs.pivotal.io/scdf/1-6/getting-started.html#creating-a-data-pipeline-using-the-dashboard
