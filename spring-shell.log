@@ -1,0 +1,5 @@
+// dataflow 1.2.0.RELEASE log opened at 2020-05-21 16:54:30
+app list
+app import --uri https://dataflow.spring.io/rabbitmq-maven-latest
+stream create --name mysqlstream --definition "http | jdbc --tableName=names --columns=name"
+stream deploy --name mysqlstream --properties "deployer.jdbc.cloudfoundry.services=vets-db"

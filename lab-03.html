@@ -481,10 +481,62 @@ CREATE TABLE names
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_steps">Steps</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a stream</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">dataflow:&gt;stream create --name mysqlstream --definition "http | jdbc --tableName=names --columns=name"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Deploy the stream</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">stream deploy --name mysqlstream --properties "deployer.jdbc.cloudfoundry.services=mysql-db"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Verify the stream is successfully deployed</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">$cf apps | grep mysql
+pivotal-mysqlweb                                started           1/1         1G       1G     pivotal-mysqlweb-grouchy-fossa-yq.cfapps.haas-438.pez.pivotal.io
+YIOpPBA-mysqlstream-jdbc-v1                     started           1/1         2G       1G     YIOpPBA-mysqlstream-jdbc-v1.cfapps.haas-438.pez.pivotal.io
+YIOpPBA-mysqlstream-http-v1                     started           1/1         2G       1G     YIOpPBA-mysqlstream-http-v1.cfapps.haas-438.pez.pivotal.io</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Run a curl POST cmd to test</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">curl -d '{"name":"user1"}' -H 'Content-Type: application/json' https://YIOpPBA-mysqlstream-http-v1.cfapps.haas-438.pez.pivotal.io -k</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Check names tables in mysql-db</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">select * from names;</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-05-21 16:45:54 -0600
+Last updated 2020-05-21 17:11:03 -0600
 </div>
 </div>
 </body>
