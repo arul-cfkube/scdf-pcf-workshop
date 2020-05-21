@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<title>Creating a Data Pipeline Using the Shell</title>
+<title>Lab 01</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -438,51 +438,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article">
 <div id="header">
-<h1>Creating a Data Pipeline Using the Shell</h1>
+<h1>Lab 01</h1>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>Start the Data Flow shell using the cf dataflow-shell command added by the Spring Cloud Data Flow for VMware Tanzu cf CLI plugin:</p>
-</div>
-<div class="paragraph">
-<p>$ cf dataflow-shell my-dataflow
-Attaching shell to dataflow service my-dataflow in org myorg / space dev as user&#8230;&#8203;
-Welcome to the Spring Cloud Data Flow shell. For assistance hit TAB or type "help".
-Successfully targeted <a href="https://dataflow-9f45f80b-c6b6-43dd-a7d4-e43f14990ffd.apps.example.com" class="bare">https://dataflow-9f45f80b-c6b6-43dd-a7d4-e43f14990ffd.apps.example.com</a>
-dataflow:&gt;
-Import the stream app starters using the Data Flow shell’s app import command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>dataflow:&gt;app import https://dataflow.spring.io/rabbitmq-maven-latest
-Successfully registered 65 applications from [source.sftp.metadata,
-sink.throughput.metadata, ... sink.router.metadata, sink.mongodb]
-With the app starters imported, you can use three–the http source, the split processor, and the log sink–to create a stream that consumes data via an HTTP POST request, processes it by splitting it into words, and outputs the results in logs.</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Create the stream using the Data Flow shell’s stream create command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>dataflow:&gt;stream create --name words --definition "http | splitter --expression=payload.split(' ') | log"
-Created new stream 'words'</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Next, deploy the stream, using the stream deploy command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>dataflow:&gt;stream deploy words
-Deployment request has been sent for stream 'words'</code></pre>
-</div>
-</div>
-</div>
-</div>
-<h1 id="_lab_01" class="sect0">Lab 01</h1>
 <div class="sect1">
 <h2 id="_requirements_for_lab_01">Requirements for lab-01</h2>
 <div class="sectionbody">
@@ -532,11 +490,15 @@ updated:   2020-05-16T21:32:19Z</code></pre>
 </div>
 </li>
 <li>
-<p>Creating a Data Pipeline Using the Shell</p>
+<p>Check access to SCDF service</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>cf dfsh scdf-service
-Attaching shell to dataflow service scdf-service in org arul / space test as admin...
+<pre class="highlight"><code class="language-bash" data-lang="bash">cf dfsh scdf-service</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">Attaching shell to dataflow service scdf-service in org arul / space test as admin...
 Launching dataflow shell JAR
   ____                              ____ _                __
  / ___| _ __  _ __(_)_ __   __ _   / ___| | ___  _   _  __| |
@@ -564,7 +526,7 @@ dataflow:&gt;</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-05-21 13:19:13 -0600
+Last updated 2020-05-21 13:54:16 -0600
 </div>
 </div>
 </body>

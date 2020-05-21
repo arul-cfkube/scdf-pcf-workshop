@@ -1,9 +1,3 @@
-
-
-
-
-# Creating a Data Pipeline Using the Shell
-
 = Lab 01
 
 ==  Requirements for lab-01
@@ -48,12 +42,18 @@ updated:   2020-05-16T21:32:19Z
  $ cf install-plugin -r CF-Community "spring-cloud-dataflow-for-pcf"
 ---------------------------------------------------------------------
 
-. Creating a Data Pipeline Using the Shell
+. Check access to SCDF service
+
++
+[source,bash]
+---------------------------------------------------------------------
+cf dfsh scdf-service
+---------------------------------------------------------------------
+
 +
 [source,bash]
 ---------------------------------------------------------------------
 
-cf dfsh scdf-service
 Attaching shell to dataflow service scdf-service in org arul / space test as admin...
 Launching dataflow shell JAR
   ____                              ____ _                __
