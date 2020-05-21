@@ -1,6 +1,6 @@
 = Lab-01
 
-==  Running an  app from SCDF shell
+==  Running an data pipeline from SCDF shell
 
 . Access SCDF Shell
 +
