@@ -76,8 +76,8 @@ dataflow:>http post --target https://RWSDZgk-words-http-v1.apps.example.com --da
 +
 [source, bash]
 ---------------------------------------------------------------------
-2018-06-07T16:47:08.80-0500 [APP/PROC/WEB/0] OUT 2018-06-07 21:47:08.808  INFO 16 --- [plitter.words-1] RWSDZgk-words-log-v1                     : This
-2018-06-07T16:47:08.81-0500 [APP/PROC/WEB/0] OUT 2018-06-07 21:47:08.810  INFO 16 --- [plitter.words-1] RWSDZgk-words-log-v1                     : is
-2018-06-07T16:47:08.82-0500 [APP/PROC/WEB/0] OUT 2018-06-07 21:47:08.820  INFO 16 --- [plitter.words-1] RWSDZgk-words-log-v1                     : a
-2018-06-07T16:47:08.82-0500 [APP/PROC/WEB/0] OUT 2018-06-07 21:47:08.822  INFO 16 --- [plitter.words-1] RWSDZgk-words-log-v1                     : test
+2020-05-20T16:47:08.80-0500 [APP/PROC/WEB/0] OUT 2020-05-20 21:47:08.808  INFO 16 --- [plitter.words-1] RWSDZgk-words-log-v1                     : This
+2020-05-20T16:47:08.81-0500 [APP/PROC/WEB/0] OUT 2020-05-20 21:47:08.810  INFO 16 --- [plitter.words-1] RWSDZgk-words-log-v1                     : is
+2020-05-20T16:47:08.82-0500 [APP/PROC/WEB/0] OUT 2020-05-20 21:47:08.820  INFO 16 --- [plitter.words-1] RWSDZgk-words-log-v1                     : a
+2020-05-20T16:47:08.82-0500 [APP/PROC/WEB/0] OUT 2020-05-20 21:47:08.822  INFO 16 --- [plitter.words-1] RWSDZgk-words-log-v1                     : test
 ---------------------------------------------------------------------
