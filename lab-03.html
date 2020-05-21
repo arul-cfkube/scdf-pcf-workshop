@@ -441,13 +441,50 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1>HTTP to MySQL Demo</h1>
 </div>
 <div id="content">
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>===In this demonstration, you will learn how to build a data pipeline using Spring Cloud Data Flow to consume data from an http endpoint and write to MySQL database using jdbc sink.</p>
+<p>In this demonstration, you will learn how to build a data pipeline using Spring Cloud Data Flow to consume data from an http endpoint and write to MySQL database using jdbc sink.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_requirements">Requirements</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Mysql Tile installed on TAS</p>
+</li>
+<li>
+<p>create a mysql service</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ cf cs p.mysql small mysql-db</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create the test database with a names table (in MySQL) using:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">CREATE DATABASE test;
+USE test;
+CREATE TABLE names
+(
+	name varchar(255)
+);</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-05-21 16:29:28 -0600
+Last updated 2020-05-21 16:45:54 -0600
 </div>
 </div>
 </body>
