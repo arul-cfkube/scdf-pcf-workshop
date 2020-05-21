@@ -1,6 +1,6 @@
 # Spring Cloud Data Flow Workshop for Tanzu Application Service
 
-This is workshop focuses on Spring Cloud Data Flow and TAS
+This workshop focuses on Spring Cloud Data Flow and TAS
 
 * Introduction to Spring Cloud Dataflow and customer uses cases (1 hr)
 * DEMO - Real world use case (30 min)
