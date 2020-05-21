@@ -1,4 +1,4 @@
-= Lab 01
+= Pre-Requirements
 
 ==  Requirements for lab-01
 
@@ -35,15 +35,7 @@ updated:   2020-05-16T21:32:19Z
  $ cf install-plugin -r CF-Community "spring-cloud-dataflow-for-pcf"
 ---------------------------------------------------------------------
 
-. Creating a Data Pipeline Using the Shell
-+
-[source,bash]
----------------------------------------------------------------------
- $ cf install-plugin -r CF-Community "spring-cloud-dataflow-for-pcf"
----------------------------------------------------------------------
-
 . Check access to SCDF service
-
 +
 [source,bash]
 ---------------------------------------------------------------------
