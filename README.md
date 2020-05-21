@@ -11,4 +11,4 @@ This workshop focuses on Spring Cloud Data Flow and TAS
 * Hands on labs (1 hr)
     * link:labs/lab-01.html[_Pre-requirments-check_]
     * link:labs/lab-02.html[_Creating a simple data pipeline using SCDF dashboard_]
-    * link:labs/lab-03.html[_Creating a data pipeline  - Http to MYSQL_]
+    * link:https://arulvannala.github.io/scdf-pcf-workshop/labs/lab-03.html[_Creating a data pipeline  - Http to MYSQL_]
