@@ -1,5 +1,5 @@
 # Spring Cloud Data Flow Workshop for Tanzu Application Service
-[.lead]
+
 This workshop focuses on Spring Cloud Data Flow and TAS
 
 Agenda::
@@ -16,8 +16,8 @@ Agenda::
 
 
 ## Next?
-* link:https://dataflow.spring.io/getting-started/[_SCDF Getting Started_]
-* link:https://dataflow.spring.io/docs/stream-developer-guides/[_SCDF Stream Developer guides_]
-* link:https://dataflow.spring.io/docs/batch-developer-guides/[_SCDF Batch Developer guides_]
-* link:https://www.youtube.com/watch?v=WPh63r7aehU[_Real-Time Performance Analysis of Data-Processing Pipelines with Spring Cloud Data Flow, Micrometer_]
-* link:https://www.youtube.com/watch?v=9GkrIUprgW8[_Building Cloud-Native Data-Intensive Applications with Spring_]
+* [_SCDF Getting Started_]
+* [_SCDF Stream Developer guides_]
+* [_SCDF Batch Developer guides_]
+* [_Real-Time Performance Analysis of Data-Processing Pipelines with Spring Cloud Data Flow, Micrometer_]
+* [_Building Cloud-Native Data-Intensive Applications with Spring_]
