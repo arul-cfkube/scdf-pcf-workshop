@@ -1,6 +1,6 @@
-# Spring Cloud Data Flow Workshop for Tanzu Application Service
+# Workshop on Spring Cloud Data Flow for Tanzu Application Service
 
-This workshop focuses on Spring Cloud Data Flow and TAS
+This workshop focuses on getting started with  Spring Cloud Data Flow  on TAS for operations and developer teams. Come let's BUILD, RUN and MANAGE production grade data pipelines in minutes. 
 
 ## Agenda::
 * Introduction to Spring Cloud Dataflow and customer uses cases (1 hr) - Wayne Lund
