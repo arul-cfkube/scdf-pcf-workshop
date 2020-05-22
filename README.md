@@ -10,12 +10,12 @@ This workshop focuses on Spring Cloud Data Flow and TAS
 * Demo - Tasks in SCDF  (15 min) - Wayne Lund
 * SCDF Life Cycle Management (20 min) - Wayne Lund
 
-## Hands on labs (1 hr)
+## Hands on labs (1 hr) - Arul/Wayne
     * [_Pre-requirments-check_]  
     * [_Creating a simple data pipeline using SCDF dashboard and Shell_]
     * [_Creating a steam pipeline reading from http source and writes to mysql database_]
 
-Requirments::
+## Requirments for participants ::
 * cf cli installed on local `https://docs.cloudfoundry.org/cf-cli/install-go-cli.html`
 * scdf cf plugin installed `cf install-plugin -r CF-Community "spring-cloud-dataflow-for-pcf"`
 
