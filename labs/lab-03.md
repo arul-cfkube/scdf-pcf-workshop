@@ -61,7 +61,7 @@ curl -d '{"name":"user1"}' -H 'Content-Type: application/json' <<http-app-url>> 
 
 ---------------------------------------------------------------------
 
-. The name should be updated in mysql db. Check names tables to confirm
+. The name should be updated in mysql db. Check names tables to confirm . We could use mysql web app to do this. https://github.com/pivotal-cf/PivotalMySQLWeb
 +
 [source, bash]
 ---------------------------------------------------------------------
