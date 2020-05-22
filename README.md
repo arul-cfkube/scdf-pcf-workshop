@@ -16,8 +16,8 @@ This workshop focuses on Spring Cloud Data Flow and TAS
 
 ## Next?
 
-* link:https://dataflow.spring.io/getting-started/[SCDF Getting Started]
-* link:https://dataflow.spring.io/docs/stream-developer-guides/[SCDF Stream Developer guides]
-* link:https://dataflow.spring.io/docs/batch-developer-guides/[SCDF Batch Developer guides]
-* link:https://www.youtube.com/watch?v=WPh63r7aehU[Real-Time Performance Analysis of Data-Processing Pipelines with Spring Cloud Data Flow, Micrometer]
-* link:https://www.youtube.com/watch?v=9GkrIUprgW8[Building Cloud-Native Data-Intensive Applications with Spring]
+* link:https://dataflow.spring.io/getting-started/[_SCDF Getting Started_]
+* link:https://dataflow.spring.io/docs/stream-developer-guides/[_SCDF Stream Developer guides_]
+* link:https://dataflow.spring.io/docs/batch-developer-guides/[_SCDF Batch Developer guides_]
+* link:https://www.youtube.com/watch?v=WPh63r7aehU[_Real-Time Performance Analysis of Data-Processing Pipelines with Spring Cloud Data Flow, Micrometer_]
+* link:https://www.youtube.com/watch?v=9GkrIUprgW8[_Building Cloud-Native Data-Intensive Applications with Spring_]
