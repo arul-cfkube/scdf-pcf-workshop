@@ -517,12 +517,15 @@ YIOpPBA-mysqlstream-http-v1                     started           1/1         2G
 <p>Run a curl POST cmd to test</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">curl -d '{"name":"user1"}' -H 'Content-Type: application/json' https://YIOpPBA-mysqlstream-http-v1.cfapps.haas-438.pez.pivotal.io -k</code></pre>
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ curl -d '{"name":"user1"}' -H 'Content-Type: application/json' https://YIOpPBA-mysqlstream-http-v1.cfapps.haas-438.pez.pivotal.io -k
+
+Eg:
+curl -d '{"name":"user1"}' -H 'Content-Type: application/json' &lt;&lt;http-app-url&gt;&gt; -k</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>Check names tables in mysql-db</p>
+<p>The name should be updated in mysql db. Check names tables to confirm</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-bash" data-lang="bash">select * from names;</code></pre>
@@ -536,7 +539,7 @@ YIOpPBA-mysqlstream-http-v1                     started           1/1         2G
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-05-21 17:11:03 -0600
+Last updated 2020-05-21 23:02:32 -0600
 </div>
 </div>
 </body>

@@ -54,10 +54,14 @@ YIOpPBA-mysqlstream-http-v1                     started           1/1         2G
 +
 [source, bash]
 ---------------------------------------------------------------------
-curl -d '{"name":"user1"}' -H 'Content-Type: application/json' https://YIOpPBA-mysqlstream-http-v1.cfapps.haas-438.pez.pivotal.io -k
+$ curl -d '{"name":"user1"}' -H 'Content-Type: application/json' https://YIOpPBA-mysqlstream-http-v1.cfapps.haas-438.pez.pivotal.io -k
+
+Eg:
+curl -d '{"name":"user1"}' -H 'Content-Type: application/json' <<http-app-url>> -k
+
 ---------------------------------------------------------------------
 
-. Check names tables in mysql-db
+. The name should be updated in mysql db. Check names tables to confirm
 +
 [source, bash]
 ---------------------------------------------------------------------
