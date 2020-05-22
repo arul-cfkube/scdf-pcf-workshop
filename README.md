@@ -14,7 +14,7 @@ This workshop focuses on Spring Cloud Data Flow and TAS
     * [_Creating a data pipeline  - Http to MYSQL_]
 
 
-== Where to go from here:
+## Next?
 
 * link:https://dataflow.spring.io/getting-started/[SCDF Getting Started]
 * link:https://dataflow.spring.io/docs/stream-developer-guides/[SCDF Stream Developer guides]
