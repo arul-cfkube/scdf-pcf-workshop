@@ -1,7 +1,8 @@
 # Spring Cloud Data Flow Workshop for Tanzu Application Service
-
+[.lead]
 This workshop focuses on Spring Cloud Data Flow and TAS
 
+Agenda::
 * Introduction to Spring Cloud Dataflow and customer uses cases (1 hr) - Wayne Lund
 * Tile install overview on PCF (15 min) - Arul
 * DEMO - Real world use case (30 min) - Wayne Lund
@@ -15,7 +16,6 @@ This workshop focuses on Spring Cloud Data Flow and TAS
 
 
 ## Next?
-
 * link:https://dataflow.spring.io/getting-started/[_SCDF Getting Started_]
 * link:https://dataflow.spring.io/docs/stream-developer-guides/[_SCDF Stream Developer guides_]
 * link:https://dataflow.spring.io/docs/batch-developer-guides/[_SCDF Batch Developer guides_]
