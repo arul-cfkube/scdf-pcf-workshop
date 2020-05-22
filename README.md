@@ -1,6 +1,6 @@
 # Workshop on Spring Cloud Data Flow for Tanzu Application Service
 
-Come let's BUILD, RUN and MANAGE production grade data pipelines in minutes. Spring Cloud Data Flow on TAS workshop for operations and developer teams. 
+Come let's BUILD, RUN and MANAGE production grade data pipelines in minutes. Spring Cloud Data Flow on TAS workshop for operations and developer teams.
 
 ## Agenda::
 * Introduction to Spring Cloud Dataflow and customer uses cases (1 hr) - Wayne Lund
@@ -19,6 +19,8 @@ Come let's BUILD, RUN and MANAGE production grade data pipelines in minutes. Spr
 * cf cli installed on local `https://docs.cloudfoundry.org/cf-cli/install-go-cli.html`
 * scdf cf plugin installed `cf install-plugin -r CF-Community "spring-cloud-dataflow-for-pcf"`
 
+## Lab Requirments ::
+* TAS foundation with SCS, SCDF and MYSQL tiles installed
 
 ## Next?
 * [_SCDF Getting Started_]
