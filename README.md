@@ -8,11 +8,11 @@ This workshop focuses on Spring Cloud Data Flow and TAS
 * DEMO - Real world use case (30 min) - Wayne Lund
 * Demo - Streams in SCDF (15 min) - Wayne Lund
 * Demo - Tasks in SCDF  (15 min) - Wayne Lund
-* SCDF Life Cycle Management (15 min) - Wayne Lund
+* SCDF Life Cycle Management (20 min) - Wayne Lund
 
 ## Hands on labs (1 hr)
     * [_Pre-requirments-check_]  
-    * [_Creating a simple data pipeline using SCDF dashboard and Shell_] 
+    * [_Creating a simple data pipeline using SCDF dashboard and Shell_]
     * [_Creating a steam pipeline reading from http source and writes to mysql database_]
 
 Requirments::
