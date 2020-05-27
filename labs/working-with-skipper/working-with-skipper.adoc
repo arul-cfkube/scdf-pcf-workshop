@@ -1,0 +1,87 @@
+= Working with Skipper
+:toc: right
+:imagesdir: img
+
+[abstract]
+--
+Spring Cloud Skipper is responsible for deploying streams and tasks to the target platform  This exercise will demonstrate how to configure Skipper to deploy streams and tasks to multiple platforms.
+
+--
+
+== References
+
+https://docs.pivotal.io/scdf/index.html[SCDF on PCF Reference Documentation]
+
+https://docs.spring.io/spring-cloud-skipper/docs/current/reference/htmlsingle/[Spring Cloud Skipper Reference Guide]
+
+== Prerequisites
+
+. A local instance of SCDF.
+
+. An instance of SCDF deployed on PCF.
+
+
+== Using Skipper to Deploy a Stream to Local and PCF Platforms
+
+. In your space on PCF, create either
+
++
+* an SCDF service instance (which will create SCDF server, RabbitMQ, MySQL, and Redis service instances), or
+* a RabbitMQ service instance
+
+. Create a Skipper configuration file that specifies the platforms your SCDF streams and tasks will be deployed to. A sample file is shown, customize it accordingly for your specific PCF installation.
+
++
+NOTE: Set the `spring.cloud.skipper.platform.cloudfoundry.accounts.cf-dev.deployment.services` to the name of your RabbitMQ service instance.
++
+[source,yaml]
+```
+spring:
+  cloud:
+    skipper:
+      server:
+        platform:
+          local:
+            accounts:
+              localDevDebug:
+                javaOpts: "-Xdebug"
+          cloudfoundry:
+            accounts:
+              cf-dev:
+                connection:
+                  url: https://api.system.dbuchko.pivotaledu.io
+                  org: scdf-workshop
+                  space: student20
+                  domain: apps.dbuchko.pivotaledu.io
+                  username: student20
+                  password: <your-password>
+                  skipSslValidation: true
+                deployment:
+                  memory: 1024m
+                  disk: 1024m
+                  services: messaging-99a065d0-03df-468f-b1e6-ee36bb6e910a
+                  deleteRoutes: false
+```
+
+. Launch skipper, but add the path to your custom configuration file as part of the startup parameters.
+
++
+```
+java -jar spring-cloud-skipper-server-1.0.4.RELEASE.jar --spring.config.location=file:///Users/student/scdf-workshop/platforms.yml
+```
+image:skipper-startup.png[]
+
+. Launch a local instance of the SCDF server, making sure that skipper is enabled.
+
++
+```
+java -jar spring-cloud-dataflow-server-local-1.5.0.RELEASE.jar --spring.cloud.dataflow.features.skipper-enabled=true
+```
+image:scdf-local-with-skipper.png[]
+
+. Create a stream, then from the dashboard deploy it.  Note when the deployment parameters screen appears, there should now be a dropdown for you to choose local or PCF deplyment platforms.
+
++
+image:dashboard-deploy-params.png[]
+
+. Verify deployment to both platforms works.

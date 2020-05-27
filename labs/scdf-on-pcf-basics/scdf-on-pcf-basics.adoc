@@ -1,0 +1,117 @@
+= SCDF on PCF Basics
+:toc: right
+:imagesdir: img
+
+[abstract]
+--
+Start working with the SCDF service on PCF.
+
+--
+
+== References
+
+https://docs.pivotal.io/scdf/index.html[SCDF on PCF Reference Documentation]
+
+== Prerequisites
+
+. Install the Spring Cloud Data Flow CF CLI plugins, as per the documentation.
+
++
+```
+cf install-plugin -r CF-Community "spring-cloud-dataflow-for-pcf"
+```
+
++
+```
+cf install-plugin -r CF-Community "Service Instance Logging"
+```
++
+. Install the https://github.com/andreasf/cf-mysql-plugin#installing-and-uninstalling[CF MySQL CLI plugin].
+
++
+```
+cf install-plugin -r "CF-Community" mysql-plugin
+```
+
+
+
+== Creating a Stream Using the Shell
+
+. Work through the https://docs.pivotal.io/scdf/getting-started.html[Getting Started Guide] from the documentation.
+
++
+Create the service:
+
++
+```
+cf create-service p-dataflow standard scdf-svc
+```
+
+
++
+Once the service has been created, you should see output similar to the following:
+
++
+image::svc-created.png[]
+
+. Continue with the instructions to launch the dataflow shell.
+
++
+image::shell-startup.png[]
+
+. Import the stream app starters.
++
+NOTE: Change the URL of the stream app starters from the SR1 release in the docs, to the SR2 release.  i.e Change `http://bit.ly/Celsius-SR1-stream-applications-rabbit-maven` to `https://bit.ly/Celsius-SR2-stream-applications-rabbit-maven`.
+
++
+```
+app import https://bit.ly/Celsius-SR2-stream-applications-rabbit-maven
+```
+
++
+image::stream-starter-import.png[]
+
+. Create the sample stream from the documentation.
+
++
+```
+stream create --name words --definition "http | splitter --expression=payload.split(' ') | log"
+```
+
+. Deploy the stream.
+
++
+```
+stream deploy words --properties "app.splitter.producer.partitionKeyExpression=payload"
+```
+
+. Test it using curl - posting to the HTTP source app URL. (Your specific URL will differ.)  Tail the log sink application using `cf logs` to see the output.
+
++
+```
+curl -X POST -H "Content-Type: text/plain" --data "This is a test" http://words-http-v1.apps.dbuchko.pivotaledu.io
+```
+
++
+image::simple-log-out.png[]
+
+== Creating a Stream Using the Dashboard GUI
+
+. Follow the instructions from the documentation to create the same stream using the Dashboard GUI.
+
+
+== Create an HTTP to SQL Stream on PCF
+
+. Create a MySQL service instance in your PCF space.
+
+. Use the plugin to connect to your database instance.
+
++
+```
+cf mysql <your-instance-name>
+```
+
+. Follow the instructions from the https://docs.spring.io/spring-cloud-dataflow-samples/docs/current/reference/htmlsingle/#_using_the_cloud_foundry_server[documentation] to create the HTTP to SQL stream on PCF.
+
++
+NOTE: In addition to using the HTTP post command from the SCDF shell, you can use curl or Postman to post JSON data to the HTTP source, eg. `curl -X POST -H "Content-Type: application/json" --data '{"name":"John Doe"}' http://mysqlstream-http-v1.apps.dbuchko.pivotaledu.io`
