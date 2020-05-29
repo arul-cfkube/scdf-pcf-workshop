@@ -537,7 +537,8 @@ curl -d '{"name":"user1"}' -H 'Content-Type: application/json' &lt;&lt;http-app-
 <p>The name should be updated in mysql db. Check names tables to confirm . We could use mysql web app to do this. <a href="https://github.com/pivotal-cf/PivotalMySQLWeb" class="bare">https://github.com/pivotal-cf/PivotalMySQLWeb</a></p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">select * from names;</code></pre>
+<pre class="highlight"><code class="language-bash" data-lang="bash">cf mysql mysql-db;
+select * from names;</code></pre>
 </div>
 </div>
 </li>
@@ -548,7 +549,7 @@ curl -d '{"name":"user1"}' -H 'Content-Type: application/json' &lt;&lt;http-app-
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-05-29 10:03:57 -0600
+Last updated 2020-05-29 10:07:26 -0600
 </div>
 </div>
 </body>
