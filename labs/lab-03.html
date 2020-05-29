@@ -465,6 +465,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </li>
 <li>
+<p>Install mysql cli plugin : <a href="https://github.com/andreasf/cf-mysql-plugin#installing-and-uninstalling" class="bare">https://github.com/andreasf/cf-mysql-plugin#installing-and-uninstalling</a></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ cf install-plugin -r "CF-Community" mysql-plugin
+$ cf mysql mysql-db</code></pre>
+</div>
+</div>
+</li>
+<li>
 <p>Create the test database with a names table (in MySQL) using:</p>
 <div class="listingblock">
 <div class="content">
@@ -539,7 +548,7 @@ curl -d '{"name":"user1"}' -H 'Content-Type: application/json' &lt;&lt;http-app-
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-05-21 23:19:49 -0600
+Last updated 2020-05-29 10:03:57 -0600
 </div>
 </div>
 </body>

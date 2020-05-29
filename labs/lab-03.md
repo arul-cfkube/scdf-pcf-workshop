@@ -12,6 +12,15 @@ In this demonstration, you will learn how to build a data pipeline using Spring 
 $ cf cs p.mysql small mysql-db
 
 ---------------------------------------------------------------------
+. Install mysql cli plugin : https://github.com/andreasf/cf-mysql-plugin#installing-and-uninstalling
++
+[source, bash]
+---------------------------------------------------------------------
+$ cf install-plugin -r "CF-Community" mysql-plugin
+$ cf mysql mysql-db
+
+---------------------------------------------------------------------
+
 . Create the test database with a names table (in MySQL) using:
 +
 [source, bash]
