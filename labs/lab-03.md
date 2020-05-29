@@ -74,5 +74,6 @@ curl -d '{"name":"user1"}' -H 'Content-Type: application/json' <<http-app-url>> 
 +
 [source, bash]
 ---------------------------------------------------------------------
+cf mysql mysql-db;
 select * from names;
 ---------------------------------------------------------------------
