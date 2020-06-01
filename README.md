@@ -3,7 +3,8 @@
 Come let's BUILD, RUN and MANAGE production grade data pipelines in minutes. Spring Cloud Data Flow on TAS workshop for operations and developer teams.
 
 ## Agenda::
-* Introduction to Spring Cloud Dataflow and customer uses cases (1 hr) - Wayne Lund
+* Introduction to Spring Cloud Dataflow and customer uses cases (1 hr) - Wayne Lund :
+ .https://docs.google.com/presentation/d/1lqRuRMKDW3Ar1ETA3e_KSren3Gl71c-r/edit#slide=id.g80886c0a54_0_186
 * Tile install overview on PCF (15 min) - Arul
 * DEMO - Real world use case (30 min) - Wayne Lund
 * Demo - Streams in SCDF (15 min) - Wayne Lund
